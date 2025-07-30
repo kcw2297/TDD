@@ -1,6 +1,3 @@
-from abc import abstractmethod
-
-
 class Money:
     def __init__(self, value: int, currency: str):
         self._amount = value
