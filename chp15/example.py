@@ -5,6 +5,10 @@ class Expression:
     def reduce(self, bank: "Bank", to: str) -> 'Money':
         pass
     
+    @abstractmethod
+    def plus(self, added: "Expression") -> 'Expression':
+        pass
+    
 class Money(Expression):
     def __init__(self, value: int, currency: str):
         self.amount = value
